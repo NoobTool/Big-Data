@@ -43,10 +43,8 @@ hadoop jar /tmp/WordPairCounter2-0.0.1-SNAPSHOT.jar edu.rmit.cosc2367.s3853868.W
 
 Consider an example text below.
 
-+++++++++
-Hello, to the big world of the data.
-The quick brown fox jumped into the big data.
-+++++++++
+|Hello, to the big world of the data.<br>The quick brown fox jumped into the big data.|
+|:---|
 
 
 The co-occurence of the pair (the,big) would be = (3/17), as 'the' occurs twice with the world big in line 1, which makes it (2/8) and occurs once in line 2 which makes it (1/9).
