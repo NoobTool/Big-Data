@@ -93,6 +93,7 @@ Total Committed heap usage= 1757413376 |	Total Committed heap usage = 1824522240
 Spilled Records = 1263612 records	|	Spilled Records = 12418 records
 
 CPU time spent = 12200 		|	CPU time spent = 5150 ms
+
 ---
 
 The total mb-ms while preserving state is less than while not preserving space which makes it more efficient in both map and reduce tasks in terms and time and space used. The latter parameter space is also used less by Preserved State in this case as depicted by the total committed heap usage which is less in preserved state as compared when not preserving states.
