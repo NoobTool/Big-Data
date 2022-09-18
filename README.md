@@ -42,6 +42,7 @@ hadoop jar /tmp/WordPairCounter2-0.0.1-SNAPSHOT.jar edu.rmit.cosc2367.s3853868.W
 
 
 Consider an example text below.
+
 +++++++++
 Hello, to the big world of the data.
 The quick brown fox jumped into the big data.
@@ -79,22 +80,16 @@ Therefore, in the whole process of map-reduce, in-mapper combining with state pr
 
 The values calculated below may vary with different computational capactities. I am running the tests on Ubuntu 20.04 using a PC with an i7 8th gen processor, also equipped with GTX 1050.
  
-Not Preserved     			| 	Preserved State			 |
+|Parameter|Not Preserved|Preserved State|
+| ------------- |:-------------:|:-----:|
+| Total mb-ms by map tasks | 38983872	|	28136448 |
+| Total mb-ms by reduce tasks | 71857152 |	57179136 |
+| Map output records | 631806 | 6209 |
+| Total Committed heap usage | 1757413376 |	1824522240 |
+| Spilled Records | 1263612 records	| 12418 records|
+| CPU time spent | 12200 ms |	5150 ms |
 
-
-Total mb-ms by map tasks = 38983872	|	Total mb-ms by map tasks = 28136448
-
-Total mb-ms by reduce tasks = 71857152 |	Total mb-ms by reduce tasks = 57179136
-
-Map output records = 631806	        |	Map output records = 6209
-
-Total Committed heap usage= 1757413376 |	Total Committed heap usage = 1824522240
-
-Spilled Records = 1263612 records	|	Spilled Records = 12418 records
-
-CPU time spent = 12200 		|	CPU time spent = 5150 ms
-
----
+ ---
 
 The total mb-ms while preserving state is less than while not preserving space which makes it more efficient in both map and reduce tasks in terms and time and space used. The latter parameter space is also used less by Preserved State in this case as depicted by the total committed heap usage which is less in preserved state as compared when not preserving states.
 
