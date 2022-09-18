@@ -78,10 +78,10 @@ Therefore, in the whole process of map-reduce, in-mapper combining with state pr
 
 
 The values calculated below may vary with different computational capactities. I am running the tests on Ubuntu 20.04 using a PC with an i7 8th gen processor, also equipped with GTX 1050.
-
----
+ 
 Not Preserved     			| 	Preserved State			 |
----
+
+
 Total mb-ms by map tasks = 38983872	|	Total mb-ms by map tasks = 28136448
 
 Total mb-ms by reduce tasks = 71857152 |	Total mb-ms by reduce tasks = 57179136
